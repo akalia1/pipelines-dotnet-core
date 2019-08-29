@@ -32,9 +32,6 @@ steps:
     command: build
     projects: '**/*.csproj'
     arguments: '--configuration Release' # Update this to match your need
-#steps:
-#- script: dotnet build --configuration $(buildConfiguration)
-#  displayName: 'dotnet build $(buildConfiguration)'
 
 
 steps:
@@ -47,7 +44,6 @@ steps:
     testResultsFiles: '**/*.trx'
 
 steps:
-# ...
 # do this after your tests have run
 - script: dotnet test <test-project> --logger trx --collect "Code coverage"
 - task: PublishTestResults@2
