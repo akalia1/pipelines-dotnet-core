@@ -19,12 +19,7 @@ steps:
 #NuGet is a popular way to depend on code that you don't build. 
 #You can download NuGet packages by running the
 
-steps:
 - script: dotnet restore
-
-variables:
-  buildConfiguration: 'Release'
-
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
@@ -32,8 +27,6 @@ variables:
     projects: '**/*.csproj'
     arguments: '--configuration Release' # Update this to match your need
 
-
-steps:
 # do this after your tests have run
 - script: dotnet test <test-project> --logger trx
 - task: PublishTestResults@2
