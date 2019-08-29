@@ -20,7 +20,7 @@ pool:
 #You can download NuGet packages by running the
 
 #- script: dotnet restore
-
+steps:
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
