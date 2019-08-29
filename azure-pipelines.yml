@@ -19,7 +19,7 @@ steps:
 #NuGet is a popular way to depend on code that you don't build. 
 #You can download NuGet packages by running the
 
-- script: dotnet restore
+#- script: dotnet restore
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
