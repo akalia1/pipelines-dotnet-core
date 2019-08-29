@@ -35,7 +35,6 @@ steps:
     testRunner: VSTest
     testResultsFiles: '**/*.trx'
 
-steps:
 # do this after your tests have run
 - script: dotnet test <test-project> --logger trx --collect "Code coverage"
 - task: PublishTestResults@2
