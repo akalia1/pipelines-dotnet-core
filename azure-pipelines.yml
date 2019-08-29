@@ -10,16 +10,17 @@ pool:
   vmImage: 'ubuntu-latest'
 
 # do this before all your .NET Core tasks
-steps:
-- task: DotNetCoreInstaller@0
-  inputs:
-    packageType: 'sdk'
-    version: '2.1.300'
+#steps:
+#- task: DotNetCoreInstaller@0
+ # inputs:
+  #  packageType: 'sdk'
+   # version: '2.1.300'
 
 #NuGet is a popular way to depend on code that you don't build. 
 #You can download NuGet packages by running the
 
 #- script: dotnet restore
+
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
